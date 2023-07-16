@@ -1,0 +1,22 @@
+<h2> {{ character | uppercase }} {{'test' | uppercase}}</h2>
+<p>fhgfdhf</p>
+<h1>{{test}}</h1>
+<div>
+    <label for="name">Hero name: </label>
+    <input id="name" [(ngModel)]="test" placeholder="name">
+</div>
+
+<h2>My Heroes</h2>
+
+<div *ngIf="selectedCharacter">
+    <h3>selected: {{selectedCharacter.New}}</h3>
+</div>
+
+<ul class="heroes">
+  <li *ngFor="let kan of kanjis">
+    <button type="button" [class.selected]="kan === selectedCharacter" (click)="onSelect(kan)">
+      <span class="badge">{{kan.New}}</span>
+      <span class="name">{{kan.English_meaning}}</span>
+    </button>
+  </li>
+</ul>
