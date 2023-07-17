@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
 
 import { FormsModule } from '@angular/forms';
-import { CharacterDetailsComponent } from './character-details/character-details.component'; 
+import { CharacterDetailsComponent } from './character-details/character-details.component';
+import { MessagesComponent } from './messages/messages.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterDetailsComponent
+    CharacterDetailsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

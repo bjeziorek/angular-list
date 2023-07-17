@@ -1,22 +1,30 @@
-<h2> {{ character | uppercase }} {{'test' | uppercase}}</h2>
-<p>fhgfdhf</p>
-<h1>{{test}}</h1>
+<p>{{test}}</p>
 <div>
     <label for="name">Hero name: </label>
     <input id="name" [(ngModel)]="test" placeholder="name">
 </div>
 
-<h2>My Heroes</h2>
+<h2>Jouyou kanji list</h2>
 
-<div *ngIf="selectedCharacter">
-    <h3>selected: {{selectedCharacter.New}}</h3>
-</div>
+<app-character-details [character]="selectedCharacter"></app-character-details>
 
-<ul class="heroes">
-  <li *ngFor="let kan of kanjis">
-    <button type="button" [class.selected]="kan === selectedCharacter" (click)="onSelect(kan)">
-      <span class="badge">{{kan.New}}</span>
-      <span class="name">{{kan.English_meaning}}</span>
-    </button>
-  </li>
+<ul class="heroes" class="container">
+    <div class="'btns" *ngFor="let kan of kanjis">
+        <button 
+            [class]="'btn btn'+kan.nr" 
+            type="button" 
+            [class.selected]="kan === selectedCharacter"
+            (click)="onSelect(kan)"
+            (mouseenter)="onMouseEnter(kan)"
+            (mouseleave)="onMouseLeave(kan)"
+        >
+            <span class="kanji">{{kan.New}}</span>
+            <div [class]="'details details'+kan.nr">
+              <div [class]="'meaning meaning'+kan.nr" [innerHTML]="setInnerHTMLMeaning(kan.nr)" ></div>
+              <div [class]="'reading reading'+kan.nr" [innerHTML]="setInnerHTMLReading(kan.nr)" ></div>
+              <div [class]="'strokes strokes'+kan.nr" [innerHTML]="setInnerHTMLStrokes(kan.nr)" ></div>
+              <div [class]="'grade grade'+kan.nr" [innerHTML]="setInnerHTMLGrade(kan.nr)" ></div>
+          </div>
+        </button>
+    </div>
 </ul>
