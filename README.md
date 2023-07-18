@@ -14,7 +14,7 @@ Continuation of tutorial and playing with syntax.
 
 # Day 3
 
-Adding services and my Japanese characters database in JSON. Listing all characters on animated cards. Setting [innerHTML] directive to callback changes the element's content but I'm afraid that calling 2000+ callback on hover which mostly changes empty string to empty string is super inefficient ;) so I'll have to find another approach. Maybe just generating two way bound object keeping the state of fields of all characters? I believe it will be far better (but at least I refreshed the innerHTML directive - the key is positive thinking ;) ). 
+Adding services and my Japanese characters database in JSON. Listing all characters on animated cards. Setting [innerHTML] directive to callback which changes the element's content but I'm afraid that calling 2000+ callback on hover which mostly changes empty string to empty string is super inefficient ;) so I'll have to find another approach. Maybe just generating two way bound object keeping the state of fields of all characters? I believe it will be far better (but at least I refreshed the innerHTML directive - the key is positive thinking ;) ). 
 I also added simple dynamic filtering.
 
 # Day 4
