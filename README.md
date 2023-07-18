@@ -1,6 +1,7 @@
-# How it was made and why
+# How it was made and why and first of all what's that ;)
 
 So I wanted to refresh my knowledge about Angular, I didn't work with it for a while concentrating mostly on React.
+
 I decided to make a dictionary of Japanese signs with custom quizzes and simple puzzles using Angular basic features, router, services, RxJS, and additionally GSAP animation library with which I have had a lot of fun the last few days :).
 
 # Day 1
