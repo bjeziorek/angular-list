@@ -1,7 +1,7 @@
 <p>{{test}}</p>
 <div>
     <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="test" placeholder="name">
+    <input id="name" [(ngModel)]="test" (ngModelChange)="filter($event)" placeholder="name">
 </div>
 
 <h2>Jouyou kanji list</h2>
@@ -9,7 +9,7 @@
 <app-character-details [character]="selectedCharacter"></app-character-details>
 
 <ul class="heroes" class="container">
-    <div class="'btns" *ngFor="let kan of kanjis">
+    <div class="'btns" *ngFor="let kan of filteredKanjis">
         <button 
             [class]="'btn btn'+kan.nr" 
             type="button" 

@@ -12,6 +12,7 @@ import gsap from 'gsap';
 })
 export class CharactersComponent/* implements OnInit */{
   kanjis: Character[] = [];
+  filteredKanjis: Character[] = [];
   selectedCharacter?: Character;
   test = 'test'
   @ViewChildren('btns')
@@ -28,9 +29,30 @@ export class CharactersComponent/* implements OnInit */{
     this.getKanjis()
   }
 
+  filter(evt:string) {
+    const event = evt.trim();
+    console.log(event, this.filteredKanjis.length)
+    this.filteredKanjis = this.kanjis.filter(kanji=>{
+    //  console.log(event,kanji.Readings_romaji,kanji.Readings_romaji.includes(event))
+      return kanji.English_meaning.includes(event) ||
+      kanji.Grade.includes(event) ||
+      kanji.New.includes(event) ||
+      kanji.Old.includes(event) ||
+      kanji.Radical.includes(event) ||
+      kanji.Readings_kana.includes(event) ||
+      kanji.Readings_romaji.includes(event) ||
+      kanji.Strokes.includes(event) ||
+      kanji.Year_added.includes(event) ||
+      kanji.nr.includes(event)
+    });
+  }
+
   getKanjis(): void {
     this.characterService.getKanji()
-        .subscribe(kanji => this.kanjis = kanji);
+        .subscribe(kanji => {
+          this.kanjis = kanji
+          this.filteredKanjis = kanji;
+        });
   }
  
   onSelect(character: Character): void {
