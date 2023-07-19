@@ -1,23 +1,27 @@
-# How it was made and why
+# List
 
-So I wanted to refresh my knowledge about Angular, I didn't work with it for a while concentrating monstly on React.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
-I decided to make a dictionary of Japanese signs with custom quizes and simple puzzles using using Angular basic features, router, services, RxJS and additionaly GSAP animation library I have a lot of fun last days :).
+## Development server
 
-# Day 1
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Refreshing Angular syntax, directives and data binding browsing though Tours of Heroes tutorial as it cover all what is important. Went pretty smoothly.
+## Code scaffolding
 
-# Day 2 
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Continuation of tutorial and playing with syntax. 
+## Build
 
-# Day 3
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Adding services and my Japanese characters database in JSON. Listing all characters on animated cards. Setting [innerHTML] directive to callback changing the element's content but I'm afraid that calling 2000+ callback on hover which mostly changes empty string to empty string is super inefficient ;) so I'll have to find another approach. Maybe just generating two way bound object keeping state of fields of all characters? I believe it will be far better (but at least I refreshed innerHTML directive - key is positive thinking ;) ). 
+## Running unit tests
 
-I also added simple dynamic filtering.
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-# Day 4
+## Running end-to-end tests
 
-In last element in each row there is a bug in GSAP animation. I used display:flex and flex-wrap: wrap what causes last element on animation jumping to the next row as it scales up and messing everything up. I tried to play with position, z-index, gap (gap slightly impoved it but only for the first line), got also a few other suggestions but no luck so far, I need a while to think about it, maybe change the whole approach of displaying the characters? The animation is pretty cool but I'm not sure if it's user friendly in UX context to be honest.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
