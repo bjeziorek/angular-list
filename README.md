@@ -20,3 +20,7 @@ I also added simple dynamic filtering.
 # Day 4
 
 In the last element in each row, there is a bug in the GSAP animation. I used display: flex and flex-wrap: wrap which causes the last element on the animation to jump to the next row as it scales up and messes everything up. I tried to play with position, z-index, and gap (the gap slightly improved it but only for the first line), got also a few other suggestions but no luck so far, I need a while to think about it, maybe change the whole approach of displaying the characters? The animation is pretty cool but I'm not sure if it's user-friendly in a UX context, to be honest.
+
+# Day 5
+
+Trying to figure out how to resolve the bug with jumping element to new line and removing callback. Not it's not that heavy to compute but I need a way to resolve CSS issues that occured.
