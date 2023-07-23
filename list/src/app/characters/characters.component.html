@@ -1,6 +1,6 @@
 <p>{{test}}</p>
 <div>
-    <label for="name">Hero name: </label>
+    <label for="name">Character name: </label>
     <input id="name" [(ngModel)]="test" (ngModelChange)="filter($event)" placeholder="name">
 </div>
 
@@ -8,12 +8,16 @@
 
 <app-character-details [character]="selectedCharacter"></app-character-details>
 
+<app-quiz></app-quiz>
+
+<p>Selected list {{characterService.kanjiList.length}}: <span *ngFor="let char of characterService.kanjiList">{{char.New}}</span></p>
+
 <ul class="heroes btns" class="container">
     <div class="btn-container" *ngFor="let kan of filteredKanjis">
         <button 
             [class]="'btn btn'+kan.nr" 
             type="button" 
-            [class.selected]="kan === selectedCharacter"
+            [class.selected]="characterService.kanjiList.includes(kan)"
             (click)="onSelect(kan)"
             (mouseenter)="onMouseEnter(kan)"
             (mouseleave)="onMouseLeave(kan)"

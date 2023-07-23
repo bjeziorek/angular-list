@@ -11,9 +11,19 @@ export class CharacterService {
 
   constructor(private messageService: MessageService) { }
 
-  getKanji(): Observable<Character[]>{
+  kanjiList: Character[] = [];
+
+  addKanji(addedKanji: Character) {
+    if (this.kanjiList.includes(addedKanji)) {
+      this.kanjiList = this.kanjiList.filter(el => el.New !== addedKanji.New);
+    } else {
+      this.kanjiList.push(addedKanji);
+    }
+  }
+
+  getAllKanji(): Observable<Character[]> {
     const kanji = of(KANJI);
-    this.messageService.add('HeroService: fetched heroes');
+    this.messageService.add('KanjiService: fetched kanji');
     return kanji;
   }
 }

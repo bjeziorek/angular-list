@@ -1,0 +1,25 @@
+<p>quiz works!</p>
+<section class="quiz">
+    <p>
+        <span *ngIf="display.New">{{characterService.kanjiList[currentCharacter].New}}</span>
+        <button (click)="onShowHide('New')">Show/Hide</button>
+    </p>
+
+    <p>
+        <span *ngIf="display.English_meaning">{{characterService.kanjiList[currentCharacter].English_meaning}}</span>    
+        <button (click)="onShowHide('English_meaning')">Show/Hide</button>
+    </p>
+
+    <p>
+        <span *ngIf="display.Readings_kana">{{characterService.kanjiList[currentCharacter].Readings_kana}}</span> 
+        <button (click)="onShowHide('Readings_kana')">Show/Hide</button>
+    </p>
+    
+    <p>
+        <span *ngIf="display.Readings_romaji">{{characterService.kanjiList[currentCharacter].Readings_romaji}}</span> 
+        <button (click)="onShowHide('Readings_romaji')">Show/Hide</button>
+    </p>
+
+    <button (click)="onPrev()">Prev</button>
+    <button (click)="onNext()">Next</button>
+</section>

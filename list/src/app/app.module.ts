@@ -7,14 +7,16 @@ import { CharactersComponent } from './characters/characters.component';
 
 import { FormsModule } from '@angular/forms';
 import { CharacterDetailsComponent } from './character-details/character-details.component';
-import { MessagesComponent } from './messages/messages.component'; 
+import { MessagesComponent } from './messages/messages.component';
+import { QuizComponent } from './quiz/quiz.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
     CharacterDetailsComponent,
-    MessagesComponent
+    MessagesComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
