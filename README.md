@@ -24,3 +24,7 @@ In the last element in each row, there is a bug in the GSAP animation. I used di
 # Day 5
 
 Trying to figure out how to resolve the bug with jumping element to new line and removing callback. It's not that heavy to compute but I need a way to resolve CSS issues that occured. In the end I left it, I think that I will redesign displaying character's list. It's still a bit too heavy. I don't need this kind of animations right there, I can use this fance effect somewhere else. I removed innerHTML directive and used just the simplest two way binding, I even didn't need global object keeping their state, I resolved it making these elements invisible, but still, animating 2000+ elements at once is pretty heavy and I have to get rid of that.
+
+# Day 6
+
+I started working on quiz component. I also edited service to keep not only one character but array of them. I created methods to add and remove them and to colour added characters. The quiz component has access to that array and displays it with possibility to hide/show any field. So it's already pretty useful for learning. Just lack of styles if eyes hurting ;) but I'll take care of it later. Now I want to concentrate on functionality.
