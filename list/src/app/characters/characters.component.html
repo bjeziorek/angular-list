@@ -8,8 +8,8 @@
 
 <app-character-details [character]="selectedCharacter"></app-character-details>
 
-<ul class="heroes" class="container">
-    <div class="'btns" *ngFor="let kan of filteredKanjis">
+<ul class="heroes btns" class="container">
+    <div class="btn-container" *ngFor="let kan of filteredKanjis">
         <button 
             [class]="'btn btn'+kan.nr" 
             type="button" 
@@ -20,10 +20,10 @@
         >
             <span class="kanji">{{kan.New}}</span>
             <div [class]="'details details'+kan.nr">
-              <div [class]="'meaning meaning'+kan.nr" [innerHTML]="setInnerHTMLMeaning(kan.nr)" ></div>
-              <div [class]="'reading reading'+kan.nr" [innerHTML]="setInnerHTMLReading(kan.nr)" ></div>
-              <div [class]="'strokes strokes'+kan.nr" [innerHTML]="setInnerHTMLStrokes(kan.nr)" ></div>
-              <div [class]="'grade grade'+kan.nr" [innerHTML]="setInnerHTMLGrade(kan.nr)" ></div>
+              <div [class]="'meaning meaning'+kan.nr" >{{kan.English_meaning}}</div>
+              <div [class]="'reading reading'+kan.nr" >{{kan.Readings_kana}}</div>
+              <div [class]="'strokes strokes'+kan.nr" >Strokes: {{kan.Strokes}}</div>
+              <div [class]="'grade grade'+kan.nr" >Grade: {{kan.Grade}}</div>
           </div>
         </button>
     </div>

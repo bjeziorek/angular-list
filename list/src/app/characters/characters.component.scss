@@ -1,23 +1,78 @@
 .container {
     background-color: aqua;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+//    display: flex;
+    //justify-content: space-between;
+  //  flex-wrap: wrap;
     margin: 50px 100px 200px 100px;
-    column-gap: 30px;
-    row-gap: 30px;
-    :hover{
+    //column-gap: 30px;
+    //row-gap: 30px;
+    overflow: visible;
+
+
+    .btn-container {
+        display: inline;
+    }
+
+    .details {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+    :hover {
+        .btn {
+            display:inline;
+
+      //      flex-basis: 100%;
+        }
+
+        .details {
+            display: inline;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    // .meaning {
+    //     width:0;
+    //     height:0;
+    //     :hover {
+    //         width: auto;
+    //         height: auto;
+    //     }
+    // }
+    // .reading {
+    //     width:0;
+    //     height:0;
+    //     :hover {
+    //         width: auto;
+    //         height: auto;
+    //     }
+    // }
+    // .strokes {
+    //     width:0;
+    //     height:0;
+    //     :hover {
+    //         width: auto;
+    //         height: auto;
+    //     }
+    // }
+    // .grade {
+    //     width:0;
+    //     height:0;
+    //     :hover {
+    //         width: auto;
+    //         height: auto;
+    //     }
+    // }
+
+    :hover {
         row-gap: 0;
         column-gap: 0;
-        position: relative;
-        color:aqua;
         object-position: 50% 50%;
+
     }
 }
 
-.btn {
-  position: relative;
-}
 
 .selected {
     color: red;
